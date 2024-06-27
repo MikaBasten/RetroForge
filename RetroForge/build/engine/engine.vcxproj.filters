@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Camera2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Camera3D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Window.cpp">
@@ -18,9 +15,26 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Camera2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Camera3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{85E39923-42E6-3674-9A38-2977B2B4CAF6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{A9792E0E-69EF-324C-A0E3-010BFF509161}</UniqueIdentifier>
     </Filter>

@@ -1,6 +1,5 @@
-C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/test_program.dir
 C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/ALL_BUILD.dir
 C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/ZERO_CHECK.dir
 C:/Users/Mika/source/repos/RetroForge/RetroForge/build/engine/CMakeFiles/engine.dir
-C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/CMakeFiles/RetroForge.dir
 C:/Users/Mika/source/repos/RetroForge/RetroForge/build/editor/CMakeFiles/Editor.dir
+C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/CMakeFiles/RetroForge.dir

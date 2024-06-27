@@ -185,10 +185,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{C40E8A4F-AECC-321D-95C7-13ED9F6F1FD9}</Project>
       <Name>engine</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\build\test_program.vcxproj">
-      <Project>{6A0E0750-7754-31A7-AA1B-5669A16D1F39}</Project>
-      <Name>test_program</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
