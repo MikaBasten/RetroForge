@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Windows - 10.0.19045 - AMD64
   -
@@ -14,7 +14,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler:  
@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.9.8+b34f75857 for .NET Framework
-      Build started 26-6-2024 14:23:17.
+      Build started 27-6-2024 02:33:47.
       
       Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\3.29.6\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.42
+      Time Elapsed 00:00:00.29
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -69,7 +69,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       MSBuild version 17.9.8+b34f75857 for .NET Framework
-      Build started 26-6-2024 14:23:17.
+      Build started 27-6-2024 02:33:48.
       
       Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\3.29.6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.31
+      Time Elapsed 00:00:00.30
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -123,12 +123,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-n2qh3z"
-      binary: "C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-n2qh3z"
+      source: "C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-vn7bjo"
+      binary: "C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-vn7bjo"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-n2qh3z'
+        Change Dir: 'C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-vn7bjo'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_45f89.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cd267.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 26-6-2024 14:23:18.
+        Build started 27-6-2024 02:33:48.
         
-        Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n2qh3z\\cmTC_45f89.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vn7bjo\\cmTC_cd267.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_45f89.dir\\Debug\\".
+          Creating directory "cmTC_cd267.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n2qh3z\\Debug\\".
-          Creating directory "cmTC_45f89.dir\\Debug\\cmTC_45f89.tlog\\".
+          Creating directory "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vn7bjo\\Debug\\".
+          Creating directory "cmTC_cd267.dir\\Debug\\cmTC_cd267.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_45f89.dir\\Debug\\cmTC_45f89.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_45f89.dir\\Debug\\cmTC_45f89.tlog\\unsuccessfulbuild".
+          Creating "cmTC_cd267.dir\\Debug\\cmTC_cd267.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_cd267.dir\\Debug\\cmTC_cd267.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_45f89.dir\\Debug\\\\" /Fd"cmTC_45f89.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cd267.dir\\Debug\\\\" /Fd"cmTC_cd267.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_45f89.dir\\Debug\\\\" /Fd"cmTC_45f89.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cd267.dir\\Debug\\\\" /Fd"cmTC_cd267.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n2qh3z\\Debug\\cmTC_45f89.exe" /INCREMENTAL /ILK:"cmTC_45f89.dir\\Debug\\cmTC_45f89.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-n2qh3z/Debug/cmTC_45f89.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-n2qh3z/Debug/cmTC_45f89.lib" /MACHINE:X64  /machine:x64 cmTC_45f89.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_45f89.vcxproj -> C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n2qh3z\\Debug\\cmTC_45f89.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vn7bjo\\Debug\\cmTC_cd267.exe" /INCREMENTAL /ILK:"cmTC_cd267.dir\\Debug\\cmTC_cd267.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-vn7bjo/Debug/cmTC_cd267.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-vn7bjo/Debug/cmTC_cd267.lib" /MACHINE:X64  /machine:x64 cmTC_cd267.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_cd267.vcxproj -> C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vn7bjo\\Debug\\cmTC_cd267.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_45f89.dir\\Debug\\cmTC_45f89.tlog\\unsuccessfulbuild".
-          Touching "cmTC_45f89.dir\\Debug\\cmTC_45f89.tlog\\cmTC_45f89.lastbuildstate".
-        Done Building Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n2qh3z\\cmTC_45f89.vcxproj" (default targets).
+          Deleting file "cmTC_cd267.dir\\Debug\\cmTC_cd267.tlog\\unsuccessfulbuild".
+          Touching "cmTC_cd267.dir\\Debug\\cmTC_cd267.tlog\\cmTC_cd267.lastbuildstate".
+        Done Building Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vn7bjo\\cmTC_cd267.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.33
+        Time Elapsed 00:00:00.29
         
       exitCode: 0
   -
@@ -178,7 +178,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -196,7 +196,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.39.33523.0
@@ -206,12 +206,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-2wxmne"
-      binary: "C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-2wxmne"
+      source: "C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-mcghhq"
+      binary: "C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-mcghhq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -221,40 +221,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-2wxmne'
+        Change Dir: 'C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-mcghhq'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_925a3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_85a60.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 26-6-2024 14:23:18.
+        Build started 27-6-2024 02:33:49.
         
-        Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2wxmne\\cmTC_925a3.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mcghhq\\cmTC_85a60.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_925a3.dir\\Debug\\".
+          Creating directory "cmTC_85a60.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2wxmne\\Debug\\".
-          Creating directory "cmTC_925a3.dir\\Debug\\cmTC_925a3.tlog\\".
+          Creating directory "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mcghhq\\Debug\\".
+          Creating directory "cmTC_85a60.dir\\Debug\\cmTC_85a60.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_925a3.dir\\Debug\\cmTC_925a3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_925a3.dir\\Debug\\cmTC_925a3.tlog\\unsuccessfulbuild".
+          Creating "cmTC_85a60.dir\\Debug\\cmTC_85a60.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_85a60.dir\\Debug\\cmTC_85a60.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_925a3.dir\\Debug\\\\" /Fd"cmTC_925a3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_85a60.dir\\Debug\\\\" /Fd"cmTC_85a60.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_925a3.dir\\Debug\\\\" /Fd"cmTC_925a3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_85a60.dir\\Debug\\\\" /Fd"cmTC_85a60.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2wxmne\\Debug\\cmTC_925a3.exe" /INCREMENTAL /ILK:"cmTC_925a3.dir\\Debug\\cmTC_925a3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-2wxmne/Debug/cmTC_925a3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-2wxmne/Debug/cmTC_925a3.lib" /MACHINE:X64  /machine:x64 cmTC_925a3.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_925a3.vcxproj -> C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2wxmne\\Debug\\cmTC_925a3.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mcghhq\\Debug\\cmTC_85a60.exe" /INCREMENTAL /ILK:"cmTC_85a60.dir\\Debug\\cmTC_85a60.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-mcghhq/Debug/cmTC_85a60.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Mika/source/repos/RetroForge/RetroForge/build/CMakeFiles/CMakeScratch/TryCompile-mcghhq/Debug/cmTC_85a60.lib" /MACHINE:X64  /machine:x64 cmTC_85a60.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_85a60.vcxproj -> C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mcghhq\\Debug\\cmTC_85a60.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_925a3.dir\\Debug\\cmTC_925a3.tlog\\unsuccessfulbuild".
-          Touching "cmTC_925a3.dir\\Debug\\cmTC_925a3.tlog\\cmTC_925a3.lastbuildstate".
-        Done Building Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2wxmne\\cmTC_925a3.vcxproj" (default targets).
+          Deleting file "cmTC_85a60.dir\\Debug\\cmTC_85a60.tlog\\unsuccessfulbuild".
+          Touching "cmTC_85a60.dir\\Debug\\cmTC_85a60.tlog\\cmTC_85a60.lastbuildstate".
+        Done Building Project "C:\\Users\\Mika\\source\\repos\\RetroForge\\RetroForge\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mcghhq\\cmTC_85a60.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.31
+        Time Elapsed 00:00:00.29
         
       exitCode: 0
   -
@@ -262,7 +262,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -280,7 +280,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.39.33523.0

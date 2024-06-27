@@ -194,11 +194,8 @@ RetroForge_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 RetroForge_SOURCE_DIR:STATIC=C:/Users/Mika/source/repos/RetroForge/RetroForge
 
-//The directory containing a CMake configuration file for SDL2.
-SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
-
 //Dependencies for the target
-engine_LIB_DEPENDS:STATIC=general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.lib;general;opengl32;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.lib;general;opengl32;
+engine_LIB_DEPENDS:STATIC=general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.lib;general;opengl32;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.lib;general;opengl32;
 
 
 ########################

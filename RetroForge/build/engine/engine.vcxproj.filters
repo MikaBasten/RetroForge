@@ -1,36 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Camera2D.cpp">
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Camera3D.cpp">
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\CoreRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Engine.cpp">
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\VoxelRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Renderer.cpp">
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\MeshRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\Window.cpp">
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\utilities\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Camera2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Camera3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Camera2D.h">
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\core\Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Camera3D.h">
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\CoreRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Engine.h">
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\VoxelRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Renderer.h">
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\MeshRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\Window.h">
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\utilities\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\core\Camera2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\core\Camera3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\core\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

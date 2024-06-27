@@ -3,13 +3,23 @@
 #include <glm/glm.hpp>
 #include <iostream>
 */
-#include "engine.h"
 
+#include "core/Engine.h"
+
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+
+/*
 int main() {
     Engine engine;
     engine.hello("from game");
     return 0;
 }
+*/
 /*
 int main() {
     // Initialize SDL
@@ -24,7 +34,7 @@ int main() {
         std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
         SDL_Quit();
         return 1;
-    }
+    }vc
 
     // Initialize GLEW
     glewExperimental = GL_TRUE;
