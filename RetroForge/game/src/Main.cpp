@@ -4,12 +4,18 @@
 #include <iostream>
 */
 
+
 #include "core/Engine.h"
 
 #include <iostream>
 
-int main() {
+int main(int argc, char* argv[])
+{
     std::cout << "Hello, World!" << std::endl;
+    Engine engine;
+    engine.hello("it works");
+    engine.initialize();
+    engine.run();
     return 0;
 }
 

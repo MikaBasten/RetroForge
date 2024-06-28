@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -105,18 +105,34 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying SDL2.dll and glew32.dll to C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.dll C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.dll C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;..\engine\Debug\engine.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;opengl32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;..\engine\Debug\engine.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;opengl32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -131,7 +147,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -150,18 +166,34 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying SDL2.dll and glew32.dll to C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/Release"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.dll C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.dll C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;..\engine\Release\engine.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;opengl32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;..\engine\Release\engine.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;opengl32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -176,7 +208,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -195,18 +227,34 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying SDL2.dll and glew32.dll to C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/MinSizeRel"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.dll C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.dll C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;..\engine\MinSizeRel\engine.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;opengl32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;..\engine\MinSizeRel\engine.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;opengl32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -221,7 +269,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -239,18 +287,34 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include\core;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\SDL2;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glew;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\include\glm;C:\Users\Mika\source\repos\RetroForge\RetroForge\game\include;C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying SDL2.dll and glew32.dll to C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/RelWithDebInfo"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.dll C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.dll C:/Users/Mika/source/repos/RetroForge/RetroForge/build/game/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;..\engine\RelWithDebInfo\engine.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;opengl32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;..\engine\RelWithDebInfo\engine.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;opengl32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\SDL2main.lib;C:\Users\Mika\source\repos\RetroForge\RetroForge\third_party\lib\glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>

@@ -194,8 +194,17 @@ RetroForge_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 RetroForge_SOURCE_DIR:STATIC=C:/Users/Mika/source/repos/RetroForge/RetroForge
 
+//Path to a library.
+SDL2MAIN_LIBRARY:FILEPATH=SDL2MAIN_LIBRARY-NOTFOUND
+
+//Path to a file.
+SDL2_INCLUDE_DIR:PATH=SDL2_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+SDL2_LIBRARY:FILEPATH=SDL2_LIBRARY-NOTFOUND
+
 //Dependencies for the target
-engine_LIB_DEPENDS:STATIC=general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.lib;general;opengl32;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.lib;general;opengl32;
+engine_LIB_DEPENDS:STATIC=general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2main.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.lib;general;opengl32;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/SDL2main.lib;general;C:/Users/Mika/source/repos/RetroForge/RetroForge/third_party/lib/glew32.lib;general;opengl32;
 
 
 ########################
@@ -328,4 +337,10 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SDL2MAIN_LIBRARY
+SDL2MAIN_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SDL2_INCLUDE_DIR
+SDL2_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SDL2_LIBRARY
+SDL2_LIBRARY-ADVANCED:INTERNAL=1
 

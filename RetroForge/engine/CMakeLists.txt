@@ -28,10 +28,10 @@ add_library(engine STATIC ${ENGINE_SOURCES} ${ENGINE_HEADERS})
 # Include directories for engine
 target_include_directories(engine PUBLIC 
     ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/src   # Include source directory for internal headers (if needed)
-    ${SDL2_INCLUDE_DIR}                # Assuming SDL2_INCLUDE_DIR is set correctly
-    ${GLM_INCLUDE_DIR}                 # Assuming GLM_INCLUDE_DIR is set correctly
+    ${SDL2_INCLUDE_DIR}
+    ${GLEW_INCLUDE_DIR}
+    ${GLM_INCLUDE_DIR}
 )
 
 # Link libraries for engine
-target_link_libraries(engine ${SDL2_LIBRARY} ${GLEW_LIBRARY} opengl32)
+target_link_libraries(engine ${SDL2_LIBRARY} ${SDL2MAIN_LIBRARY} ${GLEW_LIBRARY} opengl32)
