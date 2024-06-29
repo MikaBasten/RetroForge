@@ -1,8 +1,10 @@
 # List all engine source files
 set(ENGINE_SOURCES
     src/core/Engine.cpp
+    src/rendering/Shader.cpp
     src/rendering/CoreRenderer.cpp
     src/rendering/VoxelRenderer.cpp
+    src/rendering/Mesh.cpp
     src/rendering/MeshRenderer.cpp
     src/utilities/Logger.cpp
     src/core/Camera2D.cpp
@@ -13,8 +15,10 @@ set(ENGINE_SOURCES
 # List all engine header files
 set(ENGINE_HEADERS
     include/core/Engine.h
+    include/rendering/Shader.h
     include/rendering/CoreRenderer.h
     include/rendering/VoxelRenderer.h
+    include/rendering/Mesh.h
     include/rendering/MeshRenderer.h
     include/utilities/Logger.h
     include/core/Camera2D.h

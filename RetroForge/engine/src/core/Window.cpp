@@ -1,8 +1,9 @@
 #include "core/Window.h"
-#include <iostream> // Include for testing purposes
+#include "rendering/CoreRenderer.h" // Include CoreRenderer header
+#include <iostream>
 
 Window::Window(const std::string& title, int width, int height)
-    : m_Window(nullptr), m_Context(nullptr), m_IsClosed(false)
+    : m_Window(nullptr), m_Context(nullptr), m_IsClosed(false), m_Renderer(nullptr)
 {
     // Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
@@ -19,24 +20,8 @@ Window::Window(const std::string& title, int width, int height)
         return;
     }
 
-    // Create OpenGL context
-    m_Context = SDL_GL_CreateContext(m_Window);
-    if (!m_Context) {
-        std::cerr << "Failed to create OpenGL context: " << SDL_GetError() << std::endl;
-        SDL_DestroyWindow(m_Window);
-        SDL_Quit();
-        return;
-    }
-
-    // Set up GLEW (if needed)
-    glewExperimental = GL_TRUE;
-    if (glewInit() != GLEW_OK) {
-        std::cerr << "Failed to initialize GLEW" << std::endl;
-        SDL_GL_DeleteContext(m_Context);
-        SDL_DestroyWindow(m_Window);
-        SDL_Quit();
-        return;
-    }
+    // Set up OpenGL context
+    InitOpenGLContext();
 
     // Clear the window initially
     Clear();
@@ -68,4 +53,31 @@ void Window::SwapBuffers()
 bool Window::IsClosed() const
 {
     return m_IsClosed;
+}
+
+void Window::InitOpenGLContext()
+{
+    // Create OpenGL context
+    m_Context = SDL_GL_CreateContext(m_Window);
+    if (!m_Context) {
+        std::cerr << "Failed to create OpenGL context: " << SDL_GetError() << std::endl;
+        SDL_DestroyWindow(m_Window);
+        SDL_Quit();
+        return;
+    }
+
+    // Initialize GLEW (if needed)
+    glewExperimental = GL_TRUE;
+    if (glewInit() != GLEW_OK) {
+        std::cerr << "Failed to initialize GLEW" << std::endl;
+        SDL_GL_DeleteContext(m_Context);
+        SDL_DestroyWindow(m_Window);
+        SDL_Quit();
+        return;
+    }
+}
+
+void Window::SetRenderer(CoreRenderer* renderer)
+{
+    m_Renderer = renderer;
 }

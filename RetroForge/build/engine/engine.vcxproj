@@ -274,16 +274,20 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Engine.cpp" />
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\Shader.cpp" />
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\CoreRenderer.cpp" />
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\VoxelRenderer.cpp" />
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\Mesh.cpp" />
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\MeshRenderer.cpp" />
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\utilities\Logger.cpp" />
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Camera2D.cpp" />
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Camera3D.cpp" />
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Window.cpp" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\core\Engine.h" />
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Shader.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\CoreRenderer.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\VoxelRenderer.h" />
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Mesh.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\MeshRenderer.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\utilities\Logger.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\core\Camera2D.h" />

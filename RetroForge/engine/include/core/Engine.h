@@ -5,7 +5,6 @@
 #include "rendering/CoreRenderer.h"
 #include <string>
 
-
 class Engine {
 public:
     Engine();
@@ -19,7 +18,7 @@ public:
 
 private:
     Window m_Window;
-    //CoreRenderer m_Renderer;
+    CoreRenderer m_Renderer;
 };
 
 #endif // ENGINE_H

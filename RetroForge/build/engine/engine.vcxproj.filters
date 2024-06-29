@@ -4,10 +4,16 @@
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\core\Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\CoreRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\VoxelRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\MeshRenderer.cpp">
@@ -30,10 +36,16 @@
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\core\Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\CoreRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\VoxelRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\MeshRenderer.h">
