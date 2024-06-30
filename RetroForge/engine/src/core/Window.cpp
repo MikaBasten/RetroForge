@@ -40,9 +40,13 @@ Window::~Window()
 
 void Window::Clear()
 {
-    // Clear color buffer
+    // Set clear color to white (R=1, G=1, B=1, A=1)
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+
+    // Clear color buffer and depth buffer
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
+
 
 void Window::SwapBuffers()
 {
@@ -53,6 +57,10 @@ void Window::SwapBuffers()
 bool Window::IsClosed() const
 {
     return m_IsClosed;
+}
+
+void Window::Close() {
+    m_IsClosed = true;
 }
 
 void Window::InitOpenGLContext()

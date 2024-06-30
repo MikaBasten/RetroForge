@@ -9,7 +9,7 @@ MeshRenderer::~MeshRenderer() {
 
 void MeshRenderer::Initialize() {
     // Load and compile shaders
-    shader = Shader("shaders/mesh/mesh_vertex.glsl", "shaders/mesh/mesh_fragment.glsl");
+    shader = Shader("../../engine/shaders/mesh/mesh_vertex.glsl", "../../engine/shaders/mesh/mesh_fragment.glsl");
 
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);

@@ -12,13 +12,19 @@ public:
 
     void hello(const std::string& word);
 
-    void initialize();
-    void run();
-    void shutdown();
+    void Initialize();
+    void Run();
+    void Shutdown();
 
 private:
     Window m_Window;
     CoreRenderer m_Renderer;
+    bool m_Running;
+    SDL_Event m_Event;
+
+    void HandleEvents();
+    void Update();
+    void Render();
 };
 
 #endif // ENGINE_H

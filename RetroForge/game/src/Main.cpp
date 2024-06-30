@@ -14,8 +14,8 @@ int main(int argc, char* argv[])
     std::cout << "Hello, World!" << std::endl;
     Engine engine;
     engine.hello("it works");
-    engine.initialize();
-    engine.run();
+    engine.Initialize();
+    engine.Run();
     return 0;
 }
 

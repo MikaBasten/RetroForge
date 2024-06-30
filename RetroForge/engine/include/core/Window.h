@@ -15,6 +15,7 @@ public:
     void Clear();
     void SwapBuffers();
     bool IsClosed() const;
+    void Close();
 
     // Method to set CoreRenderer
     void SetRenderer(CoreRenderer* renderer);

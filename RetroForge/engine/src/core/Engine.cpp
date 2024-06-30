@@ -14,28 +14,61 @@ Engine::Engine()
 
 Engine::~Engine()
 {
-    // Cleanup Engine resources
+    Shutdown();
 }
 
-void Engine::initialize()
+void Engine::Initialize()
 {
     // Initialize other components if needed
 }
 
-void Engine::run()
+void Engine::Run()
 {
     // Main game loop
+    SDL_Event event;
     while (!m_Window.IsClosed()) {
-        // Handle input, update game state, etc.
+        // Handle events
+        while (SDL_PollEvent(&event)) {
+            // Handle specific events
+            switch (event.type) {
+            case SDL_QUIT:
+                m_Window.Close();
+                break;
+            case SDL_KEYDOWN:
+                // Handle key press events
+                // Example: if (event.key.keysym.sym == SDLK_UP) { /* Move player up */ }
+                break;
+                // Add more cases as needed (mouse events, etc.)
+            }
+        }
 
-        // Render game
+        // Update game logic, physics, etc.
+        // Example: m_Physics.Update();
+
+        // Render the game
         m_Window.Clear();
-        // Call renderer methods or render game objects here using m_Renderer
+        m_Renderer.Render(); // Assuming Render() method in CoreRenderer handles actual rendering
         m_Window.SwapBuffers();
+
+        // Optional: Implement frame rate limiting or synchronization here
     }
 }
 
-void Engine::shutdown()
+
+
+
+void Engine::HandleEvents()
+{
+    while (SDL_PollEvent(&m_Event)) {
+        switch (m_Event.type) {
+        case SDL_QUIT:
+            m_Running = false;
+            break;
+        }
+    }
+}
+
+void Engine::Shutdown()
 {
     // Shutdown Window and Renderer
     // m_Renderer.shutdown(); // Implement shutdown method if necessary in CoreRenderer

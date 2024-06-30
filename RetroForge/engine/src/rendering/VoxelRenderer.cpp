@@ -1,19 +1,23 @@
 #include "rendering/VoxelRenderer.h"
 #include <iostream>
 
+// Constructor
 VoxelRenderer::VoxelRenderer()
-    : shader("shaders/voxel/voxel_vertex.glsl", "shaders/voxel/voxel_fragment.glsl"), VAO(0), VBO(0) {}
+    : shader("../../engine/shaders/voxel/voxel_vertex.glsl", "../../engine/shaders/voxel/voxel_fragment.glsl"), VAO(0), VBO(0) {}
 
+// Destructor
 VoxelRenderer::~VoxelRenderer() {
     Shutdown();
 }
 
+// Initialize the renderer
 void VoxelRenderer::Initialize() {
     // Initialize shader and buffers
     shader.Use();
     SetupMesh();
 }
 
+// Render method
 void VoxelRenderer::Render(const std::vector<Voxel>& voxels, const glm::mat4& projection, const glm::mat4& view) {
     shader.Use();
 
@@ -23,15 +27,18 @@ void VoxelRenderer::Render(const std::vector<Voxel>& voxels, const glm::mat4& pr
 
     // Bind VAO and render
     glBindVertexArray(VAO);
+    glBufferData(GL_ARRAY_BUFFER, voxels.size() * sizeof(Voxel), &voxels[0], GL_DYNAMIC_DRAW);
     glDrawArrays(GL_POINTS, 0, static_cast<GLsizei>(voxels.size()));
     glBindVertexArray(0);
 }
 
+// Shutdown method
 void VoxelRenderer::Shutdown() {
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
 }
 
+// Setup mesh method
 void VoxelRenderer::SetupMesh() {
     // Create VAO
     glGenVertexArrays(1, &VAO);
