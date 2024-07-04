@@ -3,6 +3,7 @@
 
 #include "core/Window.h"
 #include "rendering/CoreRenderer.h"
+#include "rendering/Renderable.h"
 #include <string>
 
 class Engine {
@@ -15,6 +16,12 @@ public:
     void Initialize();
     void Run();
     void Shutdown();
+
+    // Method to render any Renderable object
+    template <typename T>
+    void RenderObject(const T& renderableObject) {
+        m_Renderer.RenderObject(renderableObject);
+    }
 
 private:
     Window m_Window;

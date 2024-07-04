@@ -2,13 +2,8 @@
 #define VOXELRENDERER_H
 
 #include "rendering/Shader.h"
+#include "rendering/VoxelGrid.h"
 #include <glm/glm.hpp>
-#include <vector>
-
-struct Voxel {
-    glm::vec3 position;
-    glm::vec3 color;
-};
 
 class VoxelRenderer {
 public:
@@ -16,14 +11,14 @@ public:
     ~VoxelRenderer();
 
     void Initialize();
-    void Render(const std::vector<Voxel>& voxels, const glm::mat4& projection, const glm::mat4& view);
+    void Render(const VoxelGrid& voxelGrid);
     void Shutdown();
 
 private:
     Shader shader;
     GLuint VAO, VBO;
 
-    void SetupMesh();
+    void SetupMesh(const VoxelGrid& voxelGrid);
 };
 
 #endif // VOXELRENDERER_H

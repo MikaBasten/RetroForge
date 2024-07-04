@@ -7,7 +7,13 @@
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\Shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\Renderable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\CoreRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\VoxelGrid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\src\rendering\VoxelRenderer.cpp">
@@ -39,7 +45,13 @@
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Renderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\CoreRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\VoxelGrid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\VoxelRenderer.h">

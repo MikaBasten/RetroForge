@@ -12,23 +12,17 @@ VoxelRenderer::~VoxelRenderer() {
 
 // Initialize the renderer
 void VoxelRenderer::Initialize() {
-    // Initialize shader and buffers
     shader.Use();
-    SetupMesh();
 }
 
-// Render method
-void VoxelRenderer::Render(const std::vector<Voxel>& voxels, const glm::mat4& projection, const glm::mat4& view) {
+// Render method for VoxelGrid
+void VoxelRenderer::Render(const VoxelGrid& voxelGrid) {
     shader.Use();
+    SetupMesh(voxelGrid); // Setup the mesh for the given VoxelGrid
 
-    // Set uniforms
-    shader.SetMat4("projection", projection);
-    shader.SetMat4("view", view);
-
-    // Bind VAO and render
+    // Render voxels as points
     glBindVertexArray(VAO);
-    glBufferData(GL_ARRAY_BUFFER, voxels.size() * sizeof(Voxel), &voxels[0], GL_DYNAMIC_DRAW);
-    glDrawArrays(GL_POINTS, 0, static_cast<GLsizei>(voxels.size()));
+    glDrawArrays(GL_POINTS, 0, static_cast<GLsizei>(voxelGrid.GetVoxels().size()));
     glBindVertexArray(0);
 }
 
@@ -36,20 +30,16 @@ void VoxelRenderer::Render(const std::vector<Voxel>& voxels, const glm::mat4& pr
 void VoxelRenderer::Shutdown() {
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
+    shader.Delete(); // Delete shader program
 }
 
 // Setup mesh method
-void VoxelRenderer::SetupMesh() {
-    // Create VAO
-    glGenVertexArrays(1, &VAO);
+void VoxelRenderer::SetupMesh(const VoxelGrid& voxelGrid) {
     glBindVertexArray(VAO);
 
-    // Create VBO
-    glGenBuffers(1, &VBO);
+    // Bind VBO and buffer voxel data
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-
-    // Set VBO data (empty for now, since we use glVertexAttribPointers)
-    glBufferData(GL_ARRAY_BUFFER, 0, nullptr, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, voxelGrid.GetVoxels().size() * sizeof(Voxel), voxelGrid.GetVoxels().data(), GL_DYNAMIC_DRAW);
 
     // Specify vertex attributes
     // Position attribute (vec3)
@@ -59,6 +49,5 @@ void VoxelRenderer::SetupMesh() {
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Voxel), reinterpret_cast<void*>(offsetof(Voxel, color)));
     glEnableVertexAttribArray(1);
 
-    // Unbind VAO
-    glBindVertexArray(0);
+    glBindVertexArray(0); // Unbind VAO after setup
 }

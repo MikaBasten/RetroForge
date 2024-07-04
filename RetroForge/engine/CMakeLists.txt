@@ -2,7 +2,9 @@
 set(ENGINE_SOURCES
     src/core/Engine.cpp
     src/rendering/Shader.cpp
+    src/rendering/Renderable.cpp
     src/rendering/CoreRenderer.cpp
+    src/rendering/VoxelGrid.cpp
     src/rendering/VoxelRenderer.cpp
     src/rendering/Mesh.cpp
     src/rendering/MeshRenderer.cpp
@@ -16,7 +18,9 @@ set(ENGINE_SOURCES
 set(ENGINE_HEADERS
     include/core/Engine.h
     include/rendering/Shader.h
+    include/rendering/Renderable.h
     include/rendering/CoreRenderer.h
+    include/rendering/VoxelGrid.h
     include/rendering/VoxelRenderer.h
     include/rendering/Mesh.h
     include/rendering/MeshRenderer.h

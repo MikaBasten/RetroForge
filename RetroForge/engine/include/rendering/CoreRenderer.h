@@ -1,10 +1,9 @@
-
 #ifndef CORERENDERER_H
 #define CORERENDERER_H
 
-#include "rendering/VoxelRenderer.h"
 #include "rendering/MeshRenderer.h"
-
+#include "rendering/VoxelRenderer.h"
+#include "Renderable.h"
 
 class CoreRenderer {
 public:
@@ -15,8 +14,12 @@ public:
     void Render();
     void Shutdown();
 
+
+    void RenderObject(const IRenderable& renderableObject);
+
 private:
-    VoxelRenderer voxelRenderer;
     MeshRenderer meshRenderer;
+    VoxelRenderer voxelRenderer;
 };
-#endif
+
+#endif // CORERENDERER_H

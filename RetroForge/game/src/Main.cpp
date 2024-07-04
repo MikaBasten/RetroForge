@@ -6,15 +6,34 @@
 
 
 #include "core/Engine.h"
-
+#include "rendering/Mesh.h"
 #include <iostream>
 
 int main(int argc, char* argv[])
 {
+    
     std::cout << "Hello, World!" << std::endl;
     Engine engine;
     engine.hello("it works");
+
+
+    std::vector<Vertex> vertices = {
+       {{-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 1.0f}, {0.0f, 0.0f}},
+       {{0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 1.0f}, {1.0f, 0.0f}},
+       {{0.0f, 0.5f, 0.0f}, {0.0f, 0.0f, 1.0f}, {0.5f, 1.0f}}
+    };
+
+    std::vector<unsigned int> indices = {
+        0, 1, 2
+    };
+
+
+    Mesh trianglemesh(vertices, indices);
+
     engine.Initialize();
+
+    engine.RenderObject(trianglemesh);
+
     engine.Run();
     return 0;
 }
