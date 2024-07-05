@@ -288,6 +288,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\core\Engine.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Shader.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Renderable.h" />
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\RenderablePtrWrapper.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\CoreRenderer.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\VoxelGrid.h" />
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\VoxelRenderer.h" />

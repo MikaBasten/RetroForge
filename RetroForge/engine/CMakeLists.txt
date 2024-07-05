@@ -19,6 +19,7 @@ set(ENGINE_HEADERS
     include/core/Engine.h
     include/rendering/Shader.h
     include/rendering/Renderable.h
+    include/rendering/RenderablePtrWrapper.h
     include/rendering/CoreRenderer.h
     include/rendering/VoxelGrid.h
     include/rendering/VoxelRenderer.h

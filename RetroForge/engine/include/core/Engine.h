@@ -19,8 +19,8 @@ public:
 
     // Method to render any Renderable object
     template <typename T>
-    void RenderObject(const T& renderableObject) {
-        m_Renderer.RenderObject(renderableObject);
+    void RenderObject(const std::shared_ptr<T>& renderableObject) {
+        m_Renderer.AddRenderable(renderableObject);
     }
 
 private:

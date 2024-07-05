@@ -3,7 +3,8 @@
 
 #include "rendering/MeshRenderer.h"
 #include "rendering/VoxelRenderer.h"
-#include "Renderable.h"
+#include "RenderablePtrWrapper.h"
+#include <vector>
 
 class CoreRenderer {
 public:
@@ -14,12 +15,12 @@ public:
     void Render();
     void Shutdown();
 
-
-    void RenderObject(const IRenderable& renderableObject);
+    void AddRenderable(const std::shared_ptr<IRenderable>& renderableObject);
 
 private:
     MeshRenderer meshRenderer;
     VoxelRenderer voxelRenderer;
+    std::vector<RenderablePtrWrapper> renderables;
 };
 
 #endif // CORERENDERER_H

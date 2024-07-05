@@ -16,12 +16,14 @@ void MeshRenderer::Initialize() {
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
+    std::cout << "Initialized MeshRenderer with VAO: " << VAO << std::endl;
 }
 
 void MeshRenderer::Render(const Mesh& mesh) {
     shader.Use();
     SetupMesh(mesh);
     const auto& indices = mesh.GetIndices();
+    glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indices.size()), GL_UNSIGNED_INT, nullptr);
     glBindVertexArray(0); // Unbind VAO after rendering
 }

@@ -48,6 +48,9 @@
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\Renderable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\RenderablePtrWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\Mika\source\repos\RetroForge\RetroForge\engine\include\rendering\CoreRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>

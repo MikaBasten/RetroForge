@@ -27,12 +27,11 @@ int main(int argc, char* argv[])
         0, 1, 2
     };
 
-
-    Mesh trianglemesh(vertices, indices);
+    std::shared_ptr<Mesh> triangleMesh = std::make_shared<Mesh>(vertices, indices);
 
     engine.Initialize();
 
-    engine.RenderObject(trianglemesh);
+    engine.RenderObject(triangleMesh);
 
     engine.Run();
     return 0;
