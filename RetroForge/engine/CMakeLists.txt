@@ -17,6 +17,7 @@ set(ENGINE_SOURCES
 # List all engine header files
 set(ENGINE_HEADERS
     include/core/Engine.h
+    include/core/ISystem.h
     include/rendering/Shader.h
     include/rendering/Renderable.h
     include/rendering/RenderablePtrWrapper.h

@@ -21,6 +21,9 @@ void Engine::Initialize()
 {
     // Initialize other components if needed
     m_Renderer.Initialize();
+    for (const auto& system : m_Systems) {
+        system->Initialize();
+    }
 }
 
 void Engine::Run()
@@ -36,6 +39,9 @@ void Engine::Run()
 void Engine::Shutdown()
 {
     // Shutdown Window and Renderer
+    for (const auto& system : m_Systems) {
+        system->Shutdown();
+    }
     m_Window.Close();
     m_Renderer.Shutdown();
 }

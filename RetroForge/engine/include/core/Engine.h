@@ -2,6 +2,7 @@
 #define ENGINE_H
 
 #include "core/Window.h"
+#include "core/ISystem.h"
 #include "rendering/CoreRenderer.h"
 #include "rendering/Renderable.h"
 #include <string>
@@ -17,6 +18,8 @@ public:
     void Run();
     void Shutdown();
 
+    void AddSystem(std::shared_ptr<ISystem> system);
+
     // Method to render any Renderable object
     template <typename T>
     void RenderObject(const std::shared_ptr<T>& renderableObject) {
@@ -28,6 +31,8 @@ private:
     CoreRenderer m_Renderer;
     bool m_Running;
     SDL_Event m_Event;
+
+    std::vector<std::shared_ptr<ISystem>> m_Systems;
 
     void HandleEvents();
     void Update();
